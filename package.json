@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-kms": "^3.487.0",
+    "dotenv": "^16.3.1"
+  }
+}
