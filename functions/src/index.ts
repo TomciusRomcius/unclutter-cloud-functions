@@ -52,7 +52,6 @@ exports.AWSdecrypt = functions
     const params = {
       CiphertextBlob: Buffer.from(data.data, "base64"),
     };
-    try {
       const result = await new Promise((resolve, reject) => {
         kms.encrypt(params, (err: any, result: any) => {
           if (err) {
@@ -62,11 +61,7 @@ exports.AWSdecrypt = functions
           }
         });
       });
-
-      return { result: result, error: false };
-    } catch (error) {
-      return { result: "", error: true };
-    }
+    return { result: result, error: false };
   });
 
       /*
