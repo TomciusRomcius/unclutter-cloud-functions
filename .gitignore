@@ -1,0 +1,13 @@
+/node_modules
+
+ui-debug.log
+firebase-debug.log
+firebase.json
+.firebaserc
+
+package.json
+package-lock.json
+src/package.json
+src/package-lock.json
+
+*.env
