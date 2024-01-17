@@ -1,1 +1,0 @@
-npm run serve && timeout /t 10
