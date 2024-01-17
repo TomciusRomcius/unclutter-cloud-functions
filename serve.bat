@@ -1,0 +1,1 @@
+cd functions && npm run serve && timeout /t 10
