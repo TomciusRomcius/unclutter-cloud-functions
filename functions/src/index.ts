@@ -23,6 +23,9 @@ const kms = new AWS.KMS();
 
 exports.AWSencrypt = functions
   .region("europe-west1")
+  .runWith({
+    enforceAppCheck: true,
+  })
   .https.onCall(async (data: any, context: any) => {    
     const params = {
       KeyId: AWS_KMS_KEY_ID,
@@ -48,6 +51,9 @@ exports.AWSencrypt = functions
 
 exports.AWSdecrypt = functions
   .region("europe-west1")
+  .runWith({
+    enforceAppCheck: true,
+  })
   .https.onCall(async (data: any, context: any) => {
     const params = {
       CiphertextBlob: Buffer.from(data.data, "base64"),
